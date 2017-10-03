@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+// import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Link} from 'react-router-dom';
+
+
 
 class Main extends Component {
     render () {
         return (
-            <div>
-                <h1>
-                    <Link to='/'>Reduxtagram</Link>
-                </h1>
-            </div>
+            <BrowserRouter>
+                <div>
+                    <h1>
+                        <Link to={"/"} >Reduxtogram</Link>
+                    </h1>
+
+                </div>
+            </BrowserRouter>
         )
     }
 }
 
-export { Main };
+export default Main;

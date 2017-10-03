@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
+// import { BrowserRouter, Route } from 'react-router-dom';
 
-class Single extends Component {
+class Main extends Component {
     render () {
         return (
-            <div className="single-photo">
-                I am Single
-            </div>
             // <BrowserRouter>
             //     <div>
             //         <h1>
-            //             <Link to={"/"} >Reduxtogram</Link>
+            //             <Route path="/" exact component={} />
             //         </h1>
             //     </div>
             // </BrowserRouter>
@@ -17,4 +15,4 @@ class Single extends Component {
     }
 }
 
-export default Single;
+export default Main;

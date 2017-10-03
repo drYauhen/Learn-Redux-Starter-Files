@@ -1,13 +1,22 @@
 
 import React from 'react';
-
 import { render } from 'react-dom';
-import { Main } from './components/Main';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import Main from './components/Main';
+import PhotoGrid from './components/PhotoGrid';
+import Single from './components/Single';
 
-import css from './styles/style.styl';
+import './styles/style.css';
 
 render (
-    <Main/>,
+    <BrowserRouter>
+        <Switch>
+            <Route path='/' component={Main} />
+            <Route path='/route1/' component={PhotoGrid} />
+            <Route path='/route2/' component={Single} />
+        </Switch>
+    </BrowserRouter>,
+    // <p>HI</p>,
     document.getElementById('root')
  );
 
