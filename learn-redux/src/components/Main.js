@@ -1,22 +1,15 @@
-import React, { Component } from 'react';
-// import { BrowserRouter, Route } from 'react-router-dom';
-import { BrowserRouter, Link} from 'react-router-dom';
+import React from 'react';
+import {Switch, Route} from 'react-router-dom'
+import PhotoGrid from './PhotoGrid';
+import Single from './Single';
 
+const Main = () => (
 
-
-class Main extends Component {
-    render () {
-        return (
-            <BrowserRouter>
-                <div>
-                    <h1>
-                        <Link to={"/"} >Reduxtogram</Link>
-                    </h1>
-
-                </div>
-            </BrowserRouter>
-        )
-    }
-}
+            <Switch>
+                <Route exact path='/' component={Main} />
+                <Route path='/grid' component={PhotoGrid} />
+                <Route path='/single' component={Single} />
+            </Switch>
+    )
 
 export default Main;

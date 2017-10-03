@@ -1,11 +1,12 @@
 import React from 'react';
+import Header from './components/Header';
+import Main from './components/Main';
 
-import { render } from 'react-dom';
-import { Main } from './components/Main'
+const App = () => (
+        <div>
+            <Header />
+            <Main />
+        </div>
+    )
 
-import css from './styles/style.styl';
-
-render (
-    <Main/>,
-    document.getElementById('root')
- );
+export default App;
